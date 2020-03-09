@@ -25,7 +25,7 @@ class TaskController extends AbstractController
 
 
         return $this->render('task/index.html.twig', [
-        	'controller_name' => 'Mamagoevo',
+        	'controller_name' => 'Saludos',
             'tasks' => $tasks,
         ]);
     }
