@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %} {% block title %}Titulo de la tarea{% endblock %} {% block body %}
+<div class="container">
+    <h2>Tarea: {{task.title}} | <span>Prioridad: <span class="badge badge-primary">{{task.priority}}</span></span>
+    </h2>
+    <h6 class="float-right">Creado el: {{task.createdAt|date('d/m/Y H:i:s')}}</h6>
+    <br>
+    <h5 class="float-right"></h5>
+    <br>
+    <p>
+        <strong>Descripción:</strong> {{task.content}}
+    </p>
+    <div class="container-fluid">
+        <div><strong>Created By: </strong> {{task.user.name}} {{task.user.surname}}</div>
+        <div><strong>Horas a invertir: </strong> {{task.hours}}</div>
+
+
+    </div>
+    {% endblock %}
